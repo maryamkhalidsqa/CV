@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Maryam Khalid — Senior SQA Engineer | Scrum Master | Quality Assurance Specialist" />
+  <title>Maryam Khalid — Senior SQA Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --card: #fbfcfd;
+      --muted:#6b7280;
+      --accent:#0f172a;
+      --accent-2:#2563eb;
+      --glass: rgba(15,23,42,0.04);
+      --radius: 14px;
+      --container: 1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: var(--accent);
+    }
+
+    *{box-sizing:border-box}
+    html, body{height:100%; margin:0; padding:48px 20px; background: linear-gradient(180deg,#f7f9fc 0%, #ffffff 60%); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    a{color:var(--accent-2); text-decoration:none}
+
+    .wrap{width:100%; max-width:var(--container);}
+    .card{display:flex; gap:28px; background:var(--card); padding:28px; border-radius:var(--radius); box-shadow:0 10px 30px rgba(15,23,42,0.06);}
+
+    /* Sidebar / Left Column */
+    .sidebar{width:320px; min-width:260px; padding:22px; background:linear-gradient(180deg, rgba(37,99,235,0.06), rgba(15,23,42,0.02)); border-radius:12px;}
+    .avatar{width:110px; height:110px; border-radius:50%; background:linear-gradient(135deg,var(--accent-2),#7c3aed); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:36px; box-shadow:0 6px 18px rgba(37,99,235,0.12); margin-bottom:18px;}
+    h1{font-size:22px; margin:0 0 6px 0;}
+    .role{margin:0; font-weight:600; color:var(--muted); font-size:13px;}
+    .meta{font-size:13px;color:var(--muted); margin-bottom:6px;}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:var(--glass); font-size:12px; margin:6px 6px 0 0;}
+    .contact, .skills-list{margin-top:16px; font-size:14px; color:var(--muted);}
+    .skills-list{display:flex; flex-wrap:wrap; gap:10px; list-style:none; padding:0;}
+    .skills-list li{background:rgba(15,23,42,0.04); padding:8px 10px; border-radius:8px; font-size:13px; color:var(--accent);}
+    .btn{background:var(--accent-2); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; font-size:14px; box-shadow:0 8px 20px rgba(37,99,235,0.12);}
+    .btn.secondary{background:transparent; color:var(--accent-2); border:1px solid rgba(37,99,235,0.12);}
+
+    /* Main content / Right Column */
+    .main{flex:1;}
+    section{margin-bottom:18px;}
+    h2{font-size:16px;margin:0 0 12px 0;}
+    .job{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 6px 18px rgba(13,19,40,0.03);margin-bottom:10px;}
+    .job h3{margin:0;font-size:14px;}
+    .job p{margin:6px 0 8px;color:var(--muted);font-size:13px;}
+    .job ul{margin:0;padding-left:18px;}
+    .job li{margin-bottom:6px;font-size:14px;}
+    .timeline{display:grid; gap:8px;}
+
+    /* Two column layout */
+    .two-col{display:grid; grid-template-columns:320px 1fr; gap:20px;}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .card{flex-direction:column;}
+      .two-col{grid-template-columns:1fr;}
+      .sidebar{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+
+      <!-- Left Column -->
+      <aside class="sidebar">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div class="avatar">MK</div>
+          <div>
+            <h1>Maryam Khalid</h1>
+            <div class="role">Senior SQA Engineer • Scrum Master</div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+          <div class="meta"><strong>Location</strong></div>
+          Lahore, Punjab, Pakistan
+          <div class="meta" style="margin-top:12px;"><strong>Contact</strong></div>
+          <div><a href="mailto:maryamkhalid1717@gmail.com">maryamkhalid1717@gmail.com</a></div>
+          <div><a href="tel:+923348032478">+92 334 8032478</a></div>
+          <div style="margin-top:10px;"><a href="https://linkedin.com/in/maryam-khalid-sqa" target="_blank">linkedin.com/in/maryam-khalid-sqa</a></div>
+        </div>
+
+        <!-- Education -->
+        <section style="margin-top:16px;">
+          <h2>Education</h2>
+          <div class="job" style="padding:10px;">
+            <p style="margin:0;"><strong>Bachelor of Science in Computer Science</strong><br>University of Management and Technology, Lahore</p>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section style="margin-top:16px;">
+          <h2>Certifications</h2>
+          <ul style="margin:0; padding-left:18px;">
+            <li>Professional Scrum Master I (PSM I) — Scrum.org</li>
+            <li>Test Automation with Python — LinkedIn Learning</li>
+            <li>Test Automation Foundations — LinkedIn Learning</li>
+            <li>Communicating in the Language of Leadership — LinkedIn Learning</li>
+          </ul>
+        </section>
+
+        <!-- Key Skills -->
+        <section style="margin-top:16px;">
+          <h2>Key Skills</h2>
+          <ul class="skills-list">
+            <li>Selenium (Python)</li>
+            <li>API Testing (Postman)</li>
+            <li>Performance / Load Testing</li>
+            <li>SQL / Database Testing</li>
+            <li>BrowserStack / Cross-browser</li>
+            <li>JIRA / Azure DevOps</li>
+            <li>Agile (Scrum & Kanban)</li>
+            <li>Test Strategy & Planning</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Right Column -->
+      <main class="main">
+        <section id="experience">
+          <h2>Professional Experience</h2>
+          <div class="timeline">
+
+            <!-- Axelliant -->
+            <div class="job">
+              <h3>Quality Assurance Team Lead</h3>
+              <p><strong>Axelliant</strong> — Jul 2024 – Present</p>
+              <ul>
+                <li>Led QA for AI-driven healthcare solutions and enterprise web/desktop applications.</li>
+                <li>Implemented automated testing using Selenium (Python) integrated with CI/CD pipelines.</li>
+                <li>Performed API testing, database validation, and end-to-end regression testing.</li>
+                <li>Mentored junior QA engineers and introduced reporting standards and best practices.</li>
+                <li><strong>Project:</strong> AI-Based Healthcare Platform — Full QA lifecycle including automation and API integration.</li>
+              </ul>
+            </div>
+
+            <!-- Following -->
+            <div class="job">
+              <h3>Project Manager & Scrum Master</h3>
+              <p><strong>Following — Influencers Platform (Dubai, UAE)</strong> — Oct 2023 – Oct 2024</p>
+              <ul>
+                <li>Led delivery of social media influencer integration platforms from planning to launch.</li>
+                <li>Coordinated cross-functional teams using Agile Scrum for sprint goals and client requirements.</li>
+                <li>Facilitated sprint planning, retrospectives, reviews, and stakeholder communication.</li>
+                <li><strong>Project:</strong> Influencer Integration Portal — End-to-end delivery and QA planning as Scrum Master.</li>
+              </ul>
+            </div>
+
+            <!-- 10Pearls -->
+            <div class="job">
+              <h3>Senior SQA Engineer</h3>
+              <p><strong>10Pearls</strong> — Nov 2022 – Oct 2023</p>
+              <ul>
+                <li>Managed QA for web-based e-commerce, leasing platforms, healthcare, and mobile applications.</li>
+                <li>Designed functional, regression, cross-browser, and mobile test suites.</li>
+                <li>Collaborated with development teams to define test requirements and ensure quality delivery.</li>
+                <li><strong>Projects:</strong> E-commerce, Leasing & Healthcare Platforms — Automation & QA across multiple domains.</li>
+              </ul>
+            </div>
+
+            <!-- NETSOL -->
+            <div class="job">
+              <h3>Senior SQA Engineer</h3>
+              <p><strong>NETSOL Technologies Inc.</strong> — Aug 2022 – Nov 2022</p>
+              <ul>
+                <li>Delivered testing for Mercedes-Benz India finance and leasing software products.</li>
+                <li>Handled regression, sanity, and smoke testing with JIRA and SVN.</li>
+                <li>Improved test coverage and system performance for business-critical modules.</li>
+                <li><strong>Project:</strong> Mercedes-Benz India Finance Suite — QA for enterprise finance software.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>SQA Engineer</h3>
+              <p><strong>NETSOL Technologies Inc.</strong> — Sep 2019 – Aug 2022</p>
+              <ul>
+                <li>Performed functional and non-functional testing for multiple enterprise-level products.</li>
+                <li>Collaborated with developers to identify defects and ensure timely resolution.</li>
+                <li>Prepared test plans, executed regression cycles, and documented outcomes.</li>
+                <li><strong>Projects:</strong> Enterprise Financial Platforms — QA and automation support for leasing & loan products.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>

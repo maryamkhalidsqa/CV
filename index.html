@@ -1,299 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Maryam Khalid — Senior SQA Engineer | Scrum Master | Quality Assurance Specialist" />
-  <title>Maryam Khalid — Senior SQA Engineer</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maryam Khalid | QA Specialist & Scrum Master</title>
+  <meta name="description" content="Maryam Khalid — Senior QA Engineer | Scrum Master | Digital Services & QA Outsourcing">
+  
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  <!-- CSS Styles -->
   <style>
-    :root{
-      --bg: #ffffff;
-      --card: #fbfcfd;
-      --muted:#6b7280;
-      --accent:#0f172a;
-      --accent-2:#2563eb;
-      --glass: rgba(15,23,42,0.04);
-      --radius: 14px;
-      --container: 1100px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color: var(--accent);
-    }
+    /* RESET & BASE */
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html, body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    body { background: linear-gradient(180deg,#f3f6fb 0%,#ffffff 100%); color:#0f172a; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
 
-    *{box-sizing:border-box}
-    html, body{height:100%; margin:0; padding:48px 20px; background: linear-gradient(180deg,#f7f9fc 0%, #ffffff 60%); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-    a{color:var(--accent-2); text-decoration:none}
+    /* CONTAINER */
+    .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
 
-    .wrap{width:100%; max-width:var(--container);}
-    .card{display:flex; gap:28px; background:var(--card); padding:28px; border-radius:var(--radius); box-shadow:0 10px 30px rgba(15,23,42,0.06);}
+    /* HERO SECTION */
+    header { display:flex; flex-wrap:wrap; justify-content: space-between; align-items:center; margin-bottom:60px; }
+    .hero-text { max-width:600px; }
+    .hero-text h1 { font-size:48px; font-weight:700; margin-bottom:16px; }
+    .hero-text h2 { font-size:24px; font-weight:500; color:#2563eb; margin-bottom:20px; }
+    .hero-text p { font-size:16px; color:#475569; margin-bottom:24px; }
+    .btn { display:inline-block; padding:12px 24px; border-radius:12px; font-weight:600; transition:0.3s; }
+    .btn-primary { background:#2563eb; color:white; }
+    .btn-primary:hover { background:#1e4bb8; }
+    .btn-secondary { border:2px solid #2563eb; color:#2563eb; }
+    .btn-secondary:hover { background:#2563eb; color:white; }
 
-    /* Sidebar / Left Column */
-    .sidebar{width:320px; min-width:260px; padding:22px; background:linear-gradient(180deg, rgba(37,99,235,0.06), rgba(15,23,42,0.02)); border-radius:12px;}
-    .avatar{width:110px; height:110px; border-radius:50%; background:linear-gradient(135deg,var(--accent-2),#7c3aed); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:36px; box-shadow:0 6px 18px rgba(37,99,235,0.12); margin-bottom:18px;}
-    h1{font-size:22px; margin:0 0 6px 0;}
-    .role{margin:0; font-weight:600; color:var(--muted); font-size:13px;}
-    .meta{font-size:13px;color:var(--muted); margin-bottom:6px;}
-    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:var(--glass); font-size:12px; margin:6px 6px 0 0;}
-    .contact, .skills-list{margin-top:16px; font-size:14px; color:var(--muted);}
-    .skills-list{display:flex; flex-wrap:wrap; gap:10px; list-style:none; padding:0;}
-    .skills-list li{background:rgba(15,23,42,0.04); padding:8px 10px; border-radius:8px; font-size:13px; color:var(--accent);}
-    .btn{background:var(--accent-2); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; font-size:14px; box-shadow:0 8px 20px rgba(37,99,235,0.12);}
-    .btn.secondary{background:transparent; color:var(--accent-2); border:1px solid rgba(37,99,235,0.12);}
+    .hero-avatar { width:200px; height:200px; border-radius:50%; overflow:hidden; box-shadow:0 12px 24px rgba(0,0,0,0.12); margin-top:20px; }
+    .hero-avatar img { width:100%; height:100%; object-fit:cover; }
 
-    /* Main content / Right Column */
-    .main{flex:1;}
-    section{margin-bottom:18px;}
-    h2{font-size:16px;margin:0 0 12px 0;}
-    .job{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 6px 18px rgba(13,19,40,0.03);margin-bottom:10px;}
-    .job h3{margin:0;font-size:14px;}
-    .job p{margin:6px 0 8px;color:var(--muted);font-size:13px;}
-    .job ul{margin:0;padding-left:18px;}
-    .job li{margin-bottom:6px;font-size:14px;}
-    .timeline{display:grid; gap:8px;}
+    /* SECTIONS */
+    section { margin-bottom:60px; }
 
-    /* Two column layout */
-    .two-col{display:grid; grid-template-columns:320px 1fr; gap:20px;}
+    h2.section-title { font-size:28px; font-weight:700; color:#0f172a; margin-bottom:24px; position:relative; }
+    h2.section-title::after { content:''; width:60px; height:4px; background:#2563eb; position:absolute; bottom:-10px; left:0; border-radius:2px; }
 
-    /* Responsive */
-    @media (max-width:980px){
-      .card{flex-direction:column;}
-      .two-col{grid-template-columns:1fr;}
-      .sidebar{width:100%;}
-    }
+    /* SKILLS */
+    .skills { display:flex; flex-wrap:wrap; gap:12px; }
+    .skill-badge { background:#e0e7ff; padding:8px 14px; border-radius:999px; font-size:14px; font-weight:500; color:#1e40af; }
+
+    /* TIMELINE */
+    .timeline { position:relative; padding-left:40px; margin-top:20px; }
+    .timeline::before { content:""; position:absolute; left:15px; top:0; bottom:0; width:4px; background:#2563eb; border-radius:2px; }
+    .timeline-item { position:relative; margin-bottom:40px; }
+    .timeline-item::before { content:""; position:absolute; left:-7px; top:5px; width:18px; height:18px; background:#ffffff; border:4px solid #2563eb; border-radius:50%; }
+    .timeline-item h3 { font-size:20px; font-weight:600; color:#0f172a; margin-bottom:6px; }
+    .timeline-item span { font-size:14px; color:#475569; display:block; margin-bottom:8px; }
+    .timeline-item ul { padding-left:20px; color:#475569; }
+    .timeline-item ul li { margin-bottom:6px; font-size:15px; }
+
+    /* PROJECT CARDS */
+    .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+    .project-card { background:white; border-radius:16px; box-shadow:0 12px 28px rgba(0,0,0,0.08); padding:24px; transition:0.3s; }
+    .project-card:hover { transform:translateY(-6px); }
+    .project-card h3 { font-size:18px; font-weight:600; margin-bottom:12px; }
+    .project-card ul { padding-left:18px; list-style-type: disc; color:#475569; }
+    .project-card ul li { margin-bottom:6px; }
+
+    /* SERVICES */
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+    .service-card { background:#f0f4ff; border-radius:16px; padding:24px; text-align:center; transition:0.3s; }
+    .service-card:hover { transform:translateY(-4px); background:#e0e7ff; }
+    .service-card i { font-size:36px; color:#2563eb; margin-bottom:12px; }
+    .service-card h4 { font-size:18px; font-weight:600; margin-bottom:8px; }
+    .service-card p { font-size:14px; color:#475569; }
+
+    /* CONTACT */
+    .contact-form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:12px; }
+    .contact-form input, .contact-form textarea { padding:12px; border-radius:12px; border:1px solid #cbd5e1; font-size:14px; }
+    .contact-form button { background:#2563eb; color:white; padding:12px 24px; font-weight:600; border-radius:12px; border:none; cursor:pointer; transition:0.3s; }
+    .contact-form button:hover { background:#1e4bb8; }
+
+    /* FOOTER */
+    footer { text-align:center; font-size:14px; color:#94a3b8; margin-top:60px; }
+
+    /* ANIMATIONS */
+    .fade-in { opacity:0; transform:translateY(20px); animation:fadeInUp 0.8s forwards; }
+    @keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+
+    /* MEDIA QUERIES */
+    @media(max-width:768px){ .hero { flex-direction:column; align-items:center; text-align:center; } }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
+  <div class="container">
 
-      <!-- Left Column -->
-      <aside class="sidebar">
-        <div style="display:flex;align-items:center;gap:14px">
-          <div class="avatar">MK</div>
-          <div>
-            <h1>Maryam Khalid</h1>
-            <div class="role">Senior SQA Engineer • Scrum Master</div>
-          </div>
-        </div>
+    <!-- HERO -->
+    <header class="hero fade-in">
+      <div class="hero-text">
+        <h1>Hi, I'm Maryam Khalid</h1>
+        <h2>QA Specialist & Scrum Master</h2>
+        <p>6+ years delivering high-quality web, mobile, and desktop applications. Offering QA consulting and digital services for clients worldwide.</p>
+        <a href="mailto:maryamkhalid17171@gmail.com" class="btn btn-primary">Hire / Contact</a>
+        <a href="https://maryamkhalidsqa.github.io" target="_blank" class="btn btn-secondary">Portfolio</a>
+      </div>
+      <div class="hero-avatar">
+        <img src="https://via.placeholder.com/200" alt="Maryam Khalid Avatar">
+      </div>
+    </header>
 
-        <!-- Contact -->
-        <!-- Professional Contact Section -->
-        <section style="margin-top:20px;">
-          <h2>Contact</h2>
-          <div style="background:linear-gradient(180deg,#ffffff,#f8f9fc); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.05); display:flex; flex-direction:column; gap:12px;">
-        
-            <!-- Location -->
-            <div style="display:flex; align-items:center; gap:10px;">
-              <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location" style="width:18px;height:18px;">
-              <span>Lahore, Punjab, Pakistan</span>
-            </div>
-        
-            <!-- Email -->
-            <div style="display:flex; align-items:center; gap:10px;">
-              <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width:18px;height:18px;">
-              <a href="mailto:maryamkhalid1717@gmail.com" style="color:var(--accent-2); font-weight:400;">maryamkhalid1717@gmail.com</a>
-            </div>
-        
-            <!-- Phone -->
-            <div style="display:flex; align-items:center; gap:10px;">
-              <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone" style="width:18px;height:18px;">
-              <a href="tel:+923348032478" style="color:var(--accent-2); font-weight:400;">+92 334 8032478</a>
-            </div>
-        
-            <!-- LinkedIn -->
-            <div style="display:flex; align-items:center; gap:10px;">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:18px;height:18px;">
-              <a href="/in/maryam-khalid-sqa" target="_blank" style="color:var(--accent-2); font-weight:400;">linkedin.com/in/maryam-khalid-sqa</a>
-            </div>
-        
-            <!-- GitHub -->
-            <div style="display:flex; align-items:center; gap:10px;">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:18px;height:18px;">
-              <a href="maryamkhalidsqasqa" target="_blank" style="color:var(--accent-2); font-weight:400;">github.com/maryamkhalid</a>
-            </div>
-        
-          </div>
-        </section>
+    <!-- SKILLS -->
+    <section class="fade-in">
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills">
+        <span class="skill-badge">Selenium (Python)</span>
+        <span class="skill-badge">API Testing (Postman)</span>
+        <span class="skill-badge">Agile & Scrum</span>
+        <span class="skill-badge">SQL & Database Testing</span>
+        <span class="skill-badge">BrowserStack</span>
+        <span class="skill-badge">Test Automation</span>
+        <span class="skill-badge">CI/CD (Jenkins)</span>
+      </div>
+    </section>
 
-<!-- Resume Download -->
-<div style="margin-top:18px;text-align:center;">
-  <a href="https://drive.google.com/file/d/1uxE94GKbqc_wTRf-RksfE-Ht9EtjHT_b/view" target="_blank" 
-     style="display:inline-flex;align-items:center;gap:8px;background:#2563eb;color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(37,99,235,0.15);transition:all 0.2s;">
-    <!-- Optional download icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;fill:white;" viewBox="0 0 24 24">
-      <path d="M5 20h14v-2H5v2zm7-18v12l5-5h-3V4h-4v5H7l5 5z"/>
-    </svg>
-    Download Resume
-  </a>
-</div>
-
-        <!-- Education -->
-        <section style="margin-top:16px;">
-          <h2>Education</h2>
-          <div class="education-card" style="display:flex;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg,#fff,#f9faff);box-shadow:0 6px 18px rgba(13,19,40,0.04);gap:12px;">
-            <div style="flex-shrink:0;">
-              <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032019/untitled-1_151.png?32ckcxDG3OX6yuKThX0g7WcDvb.NCEJk&itok=p_cXpzff" 
-                   alt="University of Management and Technology Logo" 
-                   style="width:60px;height:60px;border-radius:8px;object-fit:cover;">
-            </div>
-            <div>
-              <p style="margin:0;font-weight:600;font-size:15px;">Bachelor of Science in Computer Science</p>
-              <p style="margin:2px 0 0 0;font-size:13px;color:#6b7280;">University of Management and Technology, Lahore</p>
-            </div>
-          </div>
-        </section>
-
-
-        <!-- Certifications -->
-        <!-- Premium Certifications Section -->
-        <section style="margin-top:16px;">
-          <h2>Certifications</h2>
-          <div style="display:flex; flex-direction:column; gap:12px;">
-        
-            <!-- Certification Card 1 -->
-            <div style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#f5f6fa); box-shadow:0 4px 12px rgba(15,23,42,0.08);">
-              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Scrum Logo" style="width:28px; height:28px;">
-              <div>
-                <div style="font-weight:600; color:var(--accent)">Professional Scrum Master I (PSM I)</div>
-                <div style="font-size:13px; color:var(--muted)">Scrum.org</div>
-              </div>
-            </div>
-        
-            <!-- Certification Card 2 -->
-            <div style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#f5f6fa); box-shadow:0 4px 12px rgba(15,23,42,0.08);">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" style="width:28px; height:28px;">
-              <div>
-                <div style="font-weight:600; color:var(--accent)">Test Automation with Python</div>
-                <div style="font-size:13px; color:var(--muted)">LinkedIn Learning</div>
-              </div>
-            </div>
-        
-            <!-- Certification Card 3 -->
-            <div style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#f5f6fa); box-shadow:0 4px 12px rgba(15,23,42,0.08);">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" style="width:28px; height:28px;">
-              <div>
-                <div style="font-weight:600; color:var(--accent)">Test Automation Foundations</div>
-                <div style="font-size:13px; color:var(--muted)">LinkedIn Learning</div>
-              </div>
-            </div>
-        
-            <!-- Certification Card 4 -->
-            <div style="display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#f5f6fa); box-shadow:0 4px 12px rgba(15,23,42,0.08);">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" style="width:28px; height:28px;">
-              <div>
-                <div style="font-weight:600; color:var(--accent)">Communicating in the Language of Leadership</div>
-                <div style="font-size:13px; color:var(--muted)">LinkedIn Learning</div>
-              </div>
-            </div>
-        
-          </div>
-        </section>
-
-
-        <!-- Key Skills -->
-        <section style="margin-top:16px;">
-          <h2>Key Skills</h2>
-          <ul class="skills-list">
-            <li>Selenium (Python)</li>
-            <li>API Testing (Postman)</li>
-            <li>Performance / Load Testing</li>
-            <li>SQL / Database Testing</li>
-            <li>BrowserStack / Cross-browser</li>
-            <li>JIRA / Azure DevOps</li>
-            <li>Agile (Scrum & Kanban)</li>
-            <li>Test Strategy & Planning</li>
+    <!-- EXPERIENCE -->
+    <section class="fade-in">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Quality Assurance Team Lead</h3>
+          <span>Axelliant • Jul 2024 – Present</span>
+          <ul>
+            <li>Led QA efforts for AI-driven healthcare solutions and enterprise web/desktop applications.</li>
+            <li>Implemented automated testing using Selenium and CI pipelines.</li>
+            <li>Mentored junior QA engineers and improved QA processes.</li>
           </ul>
-        </section>
-      </aside>
+        </div>
+        <div class="timeline-item">
+          <h3>Project Manager & Scrum Master</h3>
+          <span>Following — Influencers Platform (Dubai, UAE) • Oct 2023 – Oct 2024</span>
+          <ul>
+            <li>Managed delivery of social media influencer platforms using Agile Scrum.</li>
+            <li>Facilitated sprint planning, reviews, and retrospectives for cross-functional teams.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <h3>Senior SQA Engineer</h3>
+          <span>10Pearls • Nov 2022 – Oct 2023</span>
+          <ul>
+            <li>Managed QA for web/mobile apps across e-commerce, leasing, and healthcare domains.</li>
+            <li>Designed regression, cross-browser, and usability test suites.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Right Column -->
-      <main class="main">
-        <!-- Professional Summary -->
-<section id="summary" style="margin-bottom:20px; padding:16px; border-radius:12px; background:linear-gradient(180deg,#f0f4ff,#ffffff); box-shadow:0 8px 20px rgba(37,99,235,0.08);">
-  <h2 style="margin:0 0 10px 0; font-size:18px; color:#0f172a;">Professional Summary</h2>
-  <p style="margin:0; font-size:14px; color:#374151; line-height:1.6;">
-    Detail-oriented Software Quality Assurance (SQA) Specialist with 6+ years of hands-on experience in manual and automation testing, Agile methodologies, and project coordination. Expert in leading QA processes, collaborating with cross-functional teams, and ensuring high-quality software delivery across healthcare, e-commerce, fintech, and social media domains. Certified Scrum Master with proven skills in leadership, communication, and problem-solving.
-  </p>
-</section>
+    <!-- PROJECTS -->
+    <section class="fade-in">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>AI-Based Healthcare Platform – Axelliant</h3>
+          <ul>
+            <li>Led QA for web and desktop AI-driven patient management system.</li>
+            <li>Implemented Selenium (Python) automation with CI/CD.</li>
+            <li>Performed API & database testing and regression cycles.</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Influencer Integration Portal – Following</h3>
+          <ul>
+            <li>Managed full project lifecycle of social media monetization platform.</li>
+            <li>Conducted QA planning, UAT, and release coordination.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section id="experience">
-          <h2>Professional Experience</h2>
-          <div class="timeline">
+    <!-- SERVICES -->
+    <section class="fade-in">
+      <h2 class="section-title">Services & QA Outsourcing</h2>
+      <div class="services">
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h4>Manual & Automation Testing</h4>
+          <p>Web, mobile, and desktop application testing using Selenium, Postman, and CI/CD integration.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-project-diagram"></i>
+          <h4>QA Process Consulting</h4>
+          <p>Improve QA workflows, create test strategies, and optimize team productivity.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-handshake"></i>
+          <h4>Outsourcing & Remote QA</h4>
+          <p>Hire our team for project-based QA support and digital services for your business.</p>
+        </div>
+      </div>
+    </section>
 
-            <!-- Axelliant -->
-            <div class="job">
-              <h3>Quality Assurance Team Lead</h3>
-              <p><strong>Axelliant</strong> — Jul 2024 – Present</p>
-              <ul>
-                <li>Led QA for AI-driven healthcare solutions and enterprise web/desktop applications.</li>
-                <li>Implemented automated testing using Selenium (Python) integrated with CI/CD pipelines.</li>
-                <li>Performed API testing, database validation, and end-to-end regression testing.</li>
-                <li>Mentored junior QA engineers and introduced reporting standards and best practices.</li>
-                <li><strong>Project:</strong> AI-Based Healthcare Platform — Full QA lifecycle including automation and API integration.</li>
-              </ul>
-            </div>
+    <!-- CONTACT -->
+    <section class="fade-in" id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <form class="contact-form" action="mailto:maryamkhalid17171@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-            <!-- Following -->
-            <div class="job">
-              <h3>Project Manager & Scrum Master</h3>
-              <p><strong>Following — Influencers Platform (Dubai, UAE)</strong> — Oct 2023 – Oct 2024</p>
-              <ul>
-                <li>Led delivery of social media influencer integration platforms from planning to launch.</li>
-                <li>Coordinated cross-functional teams using Agile Scrum for sprint goals and client requirements.</li>
-                <li>Facilitated sprint planning, retrospectives, reviews, and stakeholder communication.</li>
-                <li><strong>Project:</strong> Influencer Integration Portal — End-to-end delivery and QA planning as Scrum Master.</li>
-              </ul>
-            </div>
+    <!-- FOOTER -->
+    <footer class="fade-in">
+      &copy; 2025 Maryam Khalid — Built with care • <a href="https://github.com/maryamkhalidsqa" target="_blank">GitHub</a>
+    </footer>
 
-            <!-- 10Pearls -->
-            <div class="job">
-              <h3>Senior SQA Engineer</h3>
-              <p><strong>10Pearls</strong> — Nov 2022 – Oct 2023</p>
-              <ul>
-                <li>Managed QA for web-based e-commerce, leasing platforms, healthcare, and mobile applications.</li>
-                <li>Designed functional, regression, cross-browser, and mobile test suites.</li>
-                <li>Collaborated with development teams to define test requirements and ensure quality delivery.</li>
-                <li><strong>Projects:</strong> E-commerce, Leasing & Healthcare Platforms — Automation & QA across multiple domains.</li>
-              </ul>
-            </div>
-
-            <!-- NETSOL -->
-            <div class="job">
-              <h3>Senior SQA Engineer</h3>
-              <p><strong>NETSOL Technologies Inc.</strong> — Aug 2022 – Nov 2022</p>
-              <ul>
-                <li>Delivered testing for Mercedes-Benz India finance and leasing software products.</li>
-                <li>Handled regression, sanity, and smoke testing with JIRA and SVN.</li>
-                <li>Improved test coverage and system performance for business-critical modules.</li>
-                <li><strong>Project:</strong> Mercedes-Benz India Finance Suite — QA for enterprise finance software.</li>
-              </ul>
-            </div>
-
-            <div class="job">
-              <h3>SQA Engineer</h3>
-              <p><strong>NETSOL Technologies Inc.</strong> — Sep 2019 – Aug 2022</p>
-              <ul>
-                <li>Performed functional and non-functional testing for multiple enterprise-level products.</li>
-                <li>Collaborated with developers to identify defects and ensure timely resolution.</li>
-                <li>Prepared test plans, executed regression cycles, and documented outcomes.</li>
-                <li><strong>Projects:</strong> Enterprise Financial Platforms — QA and automation support for leasing & loan products.</li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-      </main>
-
-    </div>
   </div>
+
+  <!-- JS Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeEls = document.querySelectorAll('.fade-in');
+      fadeEls.forEach((el, i) => {
+        el.style.animationDelay = (i * 0.2) + 's';
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
